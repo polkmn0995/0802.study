@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="jquery-1.10.2.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <style>
+
+    </style> 
+    <script>
+        $(function () {
+            $(".btn_1.on").on("mouseover focus", function () {
+                alert("HELLO!")
+            });
+            $(".btn_1").addClass("on");
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+        <p><button class="btn_2">버튼2</button></p>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="jquery-1.10.2.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <style>
+        body {
+            height: 10000px;
+            width: 5000px;
+        }
+
+        #wrap {
+            position: fixed;
+            left: 50px;
+            top: 50px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>scrollTop: <span class="top">0</span>px</p>
+        <p>scrollLeft: <span class="left">0</span>px</p>
+    </div>
+    <script>
+        $(function () {
+            $(window).on("scroll", function () {
+                var sc_top = $(this).scrollTop();
+                var sc_left = $(this).scrollLeft();
+
+                $(".top").text(sc_top);
+                $(".left").text(sc_left)
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

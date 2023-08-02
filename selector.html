@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 조작및 생성</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <ul id="listZone">
+        <li>리스트</li>
+    </ul>
+    <script>
+        $(function () {
+            // .appendTo()선택한 요소를 대상요소의 뒤에 추가
+            $("<li>appendTo</li>").appendTo("#listZone")
+            // .prepend()선택한 요소를 대상요소의 앞에 추가
+            $("#listZone").prepend("<li>prepend</li>")
+
+        })
+    </script>
+</body>
+
+</html>

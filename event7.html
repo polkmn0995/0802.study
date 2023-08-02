@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="jquery-1.10.2.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p><button id="btn1">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <p class="txt"></p>
+    <script>
+        $(function () {
+            $("#btn1")
+                .data({ "text": " javacsript" })
+                .on({
+                    "mouseover": overFnc,
+                    "mouseout": outFnc
+                });
+            $("#btn2")
+                .data({ "text": "welcome!" })
+                .on({
+                    "mouseover focus": overFnc,
+                    "mouseout focus": outFnc
+                })
+            function overFnc() {
+                $(".txt").text($(this).data("text"))
+            }
+            function outFnc(){
+                $(".txt").text("")
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
